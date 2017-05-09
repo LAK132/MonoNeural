@@ -76,7 +76,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Link this neuron to another 
-        /// </summary
+        /// </summary>
         public void link(Neuron other, bool inputNeuron)
         {
             if (inputNeuron)
@@ -100,7 +100,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Link this neuron to a set of neurons
-        /// </summary
+        /// </summary>
         public void link(List<Neuron> other, bool inputNeuron)
         {
             for (int i = 0; i < other.Count; i++)
@@ -112,7 +112,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Returns the grouped outputs of the parent neurons
-        /// </summary
+        /// </summary>
         public Mat input
         {
             get
@@ -144,7 +144,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Network "activation fuction"
-        /// </summary
+        /// </summary>
         private static Mat activate(Mat X, ActivateMode mode = ActivateMode.Sigmoid, bool deriv = false)
         {
             Mat Y = new Mat(X.rows, X.cols);
@@ -174,7 +174,7 @@ namespace NeuralNet
         /// <summary>
         /// Updates this neurons output
         /// If flowDown = true then all parent (and grandparent) neurones are updated aswell
-        /// </summary
+        /// </summary>
         public void update(bool flowDown = false)
         {
             if (initialised)
@@ -198,7 +198,7 @@ namespace NeuralNet
         /// <summary>
         /// If this is the final neuron in the networ, find the network error based on the targeted outputs
         /// If this isn't the final neuron then find the error based on the 
-        /// </summary
+        /// </summary>
         public void train(Mat target, double learnRate = 1.0, double momentum = 0.0, bool first = false)
         {
             //If no update has happened since the last training then don't train again

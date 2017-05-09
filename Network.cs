@@ -13,7 +13,7 @@ namespace NeuralNet
         
         /// <summary>
         /// Layer of neurons
-        /// </summary
+        /// </summary>
         public struct Layer
         {
             public List<Neuron> neuron;
@@ -43,7 +43,7 @@ namespace NeuralNet
         
         /// <summary>
         /// Group of layers used to make the network
-        /// </summary
+        /// </summary>
         public class Layers
         {
             /// <summary>
@@ -119,7 +119,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Set of input and output data
-        /// </summary
+        /// </summary>
         public struct dataSet
         {
             public Mat inputs;
@@ -131,7 +131,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Stores the network state between epochs
-        /// </summary
+        /// </summary>
         public struct networkData
         {
             public uint inputCount;
@@ -165,7 +165,7 @@ namespace NeuralNet
 
         /// <summary>
         /// Converts the classification output to matrix output
-        /// </summary
+        /// </summary>
         public static Mat classesToOutput(uint[] A)
         {
             uint cols = 0;
